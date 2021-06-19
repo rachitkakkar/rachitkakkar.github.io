@@ -1,2 +1,2 @@
 # rachitkakkar.github.io
-Portfolio/Showcase
+single file portfolio stolen entirely from existing github pages (like the 404 and pinned repo list) 
