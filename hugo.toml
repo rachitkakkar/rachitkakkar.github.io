@@ -1,0 +1,29 @@
+baseURL = 'https://rachitkakkar.github.io/'
+languageCode = 'en-us'
+title = 'Rachit Kakkar'
+summaryLength = 20
+
+[menu]
+    [[menu.nav]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+
+    [[menu.nav]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 2
+
+    [[menu.nav]]
+    identifier = "portfolio"
+    name = "Portfolio"
+    url = "/portfolio/"
+    weight = 3
+
+    [[menu.nav]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 4
