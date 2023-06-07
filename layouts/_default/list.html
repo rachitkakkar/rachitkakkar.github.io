@@ -5,7 +5,7 @@
 
     {{ range .Pages }}
         <div class="max-w-sm w-full lg:max-w-full lg:flex rounded overflow-hidden shadow-xl mt-6">
-            <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('https://v1.tailwindcss.com/img/card-top.jpg')" title="Woman holding a mug">
+            <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('{{ .RelPermalink }}/{{ .Params.thumbnail_image }}')">
             </div>
             <div class="bg-white dark:bg-zinc-800 rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
               <div class="mb-8">

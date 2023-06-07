@@ -1,6 +1,7 @@
 ---
 title: "Building A Basic Python Raytracer With Pygame"
 date: 2022-06-09T17:01:58-05:00
+thumbnail_image: thumbnail.png
 draft: false
 ---
 
