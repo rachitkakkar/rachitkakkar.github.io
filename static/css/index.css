@@ -1016,6 +1016,10 @@ video {
     display: inline-block;
   }
 
+  .sm\:inline {
+    display: inline;
+  }
+
   .sm\:flex {
     display: flex;
   }

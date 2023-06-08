@@ -1,3 +1,4 @@
+// Dark mode
 var darkMode;
 
 if (localStorage.theme === 'dark' || !('theme' in localStorage)) {
@@ -35,3 +36,24 @@ function toggleDarkMode() {
 }
 
 document.getElementById("theme-switcher").addEventListener("click", toggleDarkMode);
+
+// Navbar
+var collapsed = true;
+
+function toggleNavbar() {
+  if (collapsed) {
+    document.getElementById("menu-list").classList.remove("hidden");
+    document.getElementById("theme-button").classList.remove("hidden");
+
+    collapsed = false;
+  }
+
+  else if (!collapsed) {
+    document.getElementById("menu-list").classList.add("hidden");
+    document.getElementById("theme-button").classList.add("hidden");
+
+    collapsed = true;
+  }
+}
+
+document.getElementById("navbar-toggle").addEventListener("click", toggleNavbar);
