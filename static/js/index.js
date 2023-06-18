@@ -1,15 +1,21 @@
+hljs.highlightAll();
+
 // Dark mode
 var darkMode;
 
-if (localStorage.theme === 'dark' || !('theme' in localStorage)) {
+if (localStorage.theme === "dark" || !("theme" in localStorage)) {
     document.getElementById("moon").classList.add("hidden");
     document.getElementById("sun").classList.remove("hidden");
+
+    document.getElementById("light-theme").setAttribute("disabled", "disabled");
 
     document.documentElement.classList.add('dark');
     darkMode = true;
   } else {
     document.getElementById("moon").classList.remove("hidden");
     document.getElementById("sun").classList.add("hidden");
+
+    document.getElementById("dark-theme").setAttribute("disabled", "disabled");
     
     document.documentElement.classList.remove('dark');
     darkMode = false;
@@ -20,6 +26,9 @@ function toggleDarkMode() {
     document.getElementById("moon").classList.remove("hidden");
     document.getElementById("sun").classList.add("hidden");
 
+    document.getElementById("light-theme").removeAttribute("disabled");
+    document.getElementById("dark-theme").setAttribute("disabled", "disabled");
+
     darkMode = false;
     document.documentElement.classList.remove("dark");
     localStorage.theme = "light";
@@ -28,6 +37,9 @@ function toggleDarkMode() {
   else if (!darkMode) {
     document.getElementById("moon").classList.add("hidden");
     document.getElementById("sun").classList.remove("hidden");
+
+    document.getElementById("light-theme").setAttribute("disabled", "disabled");
+    document.getElementById("dark-theme").removeAttribute("disabled");
 
     darkMode = true;
     document.documentElement.classList.add("dark");

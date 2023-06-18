@@ -1,29 +1,38 @@
-baseURL = 'https://rachitkakkar.github.io/'
-languageCode = 'en-us'
-title = 'Rachit Kakkar'
-summaryLength = 20
+baseURL = "https://rachitkakkar.com/"
+languageCode = "en-us"
+title = "Rachit Kakkar"
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    hl_inline = false
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    noHl = false
+    style = "dracula"
+    tabWidth = 4
 
 [menu]
-    [[menu.nav]]
-    identifier = "home"
-    name = "Home"
-    url = "/"
-    weight = 1
-
     [[menu.nav]]
     identifier = "about"
     name = "About"
     url = "/about/"
-    weight = 2
+    weight = 1
 
     [[menu.nav]]
     identifier = "portfolio"
     name = "Portfolio"
     url = "/portfolio/"
-    weight = 3
+    weight = 2
 
     [[menu.nav]]
     identifier = "posts"
     name = "Posts"
     url = "/posts/"
-    weight = 4
+    weight = 3
