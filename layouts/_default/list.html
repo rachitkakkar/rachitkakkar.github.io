@@ -1,13 +1,13 @@
 {{ define "main" }}
-<div class="bg-white dark:bg-zinc-800 mx-3 sm:mx-[20%] my-9">
+<div class="bg-white dark:bg-zinc-800 mx-3 sm:mx-[5%] md:mx-[10%] lg:mx-[15%] my-9">
     <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-6xl">{{ .Title }}</h1>
-    <div class="mt-6 text-lg leading-8 text-gray-500 dark:text-gray-300">{{ .Content }}</div>
+    <div class="mt-6 text-sm leading-8 text-gray-500 dark:text-gray-300">{{ .Content }}</div>
 
     {{ range .Pages }}
-        <div class="max-w-sm w-full lg:max-w-full lg:flex rounded overflow-hidden shadow-xl mt-6">
-            <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('{{ .RelPermalink }}/{{ .Params.thumbnail_image }}')">
+        <div class="max-w-full sm:flex rounded overflow-hidden shadow-xl mt-6">
+            <div class="h-48 sm:h-auto sm:w-48 flex-none bg-cover rounded-t sm:rounded-t-none sm:rounded-l text-center overflow-hidden" style="background-image: url('{{ .RelPermalink }}/{{ .Params.thumbnail_image }}')">
             </div>
-            <div class="bg-white dark:bg-zinc-800 rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+            <div class="bg-white dark:bg-zinc-800 rounded-b sm:rounded-b-none sm:rounded-r p-4 flex flex-col justify-between leading-normal">
               <div class="mb-8">
                 <p class="text-sm text-gray-500 dark:text-gray-300 flex items-center">
                   {{ .Date.Format "January 2, 2006" }}
