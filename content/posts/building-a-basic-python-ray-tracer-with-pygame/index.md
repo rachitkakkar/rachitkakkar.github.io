@@ -6,7 +6,7 @@ thumbnail_image: thumbnail.png
 draft: false
 ---
 {{< title >}} Introduction {{< /title >}}
-In this blog post, I will be detailing the process of creating a simple ray tracing library using pygame. I first undertook the project in my middle school advanced coding class due to an interest in 3D rendering that emerged during quarantine. The project was called {{< link href="https://github.com/rachitkakkar/resurgence_renderer/tree/main/Version1" >}}resurgence_renderer{{< /link >}} and served as an easy project to improve my python skills that could still generate beautiful images. Despite its simplicity, the project still took me a long time to research and understand the ray tracing technique before everything finally "clicked".
+In this blog post, I will be detailing the process of creating a simple ray tracing library using pygame. I first undertook the project in my middle school advanced coding class due to an interest in 3D rendering that emerged during quarantine. The project served as an easy project to improve my python skills that could still generate beautiful images. Despite its simplicity, the project still took me a long time to research and understand the ray tracing technique before everything finally "clicked".
 {{< line_break >}}
 {{< line_break >}}
 {{< title >}} Background {{< /title >}}

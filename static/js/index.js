@@ -1,4 +1,4 @@
-hljs.highlightAll();
+hljs.highlightAll(); // Syntax Highlighting
 
 // Dark mode
 var darkMode;
@@ -69,3 +69,19 @@ function toggleNavbar() {
 }
 
 document.getElementById("navbar-toggle").addEventListener("click", toggleNavbar);
+
+// Typewriter Effect
+var i = 0;
+var text = document.getElementById("typed").innerHTML;
+var builtUpText = "";
+
+function typeWriter() {
+  if (i < text.length) {
+    builtUpText += text.charAt(i);
+    i++;
+    document.getElementById("typed").innerHTML = builtUpText;
+    setTimeout(typeWriter, 100);
+  }
+}
+
+typeWriter();
