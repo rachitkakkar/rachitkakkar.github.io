@@ -9,6 +9,10 @@ draft: false
 In this blog post, I will be detailing the process of creating a simple ray tracing library using pygame. I first undertook the project in my middle school advanced coding class due to an interest in 3D rendering that emerged during quarantine. The project served as an easy project to improve my python skills that could still generate beautiful images. Despite its simplicity, the project still took me a long time to research and understand the ray tracing technique before everything finally "clicked".
 {{< line_break >}}
 {{< line_break >}}
+{{< title >}} Showcase & Code Link {{< /title >}}
+The code can be accessed {{< link href="https://github.com/rachitkakkar/resurgence_renderer/tree/main/Version1" >}}here.{{< /link >}}
+{{< line_break >}}
+{{< line_break >}}
 {{< title >}} Background {{< /title >}}
 If you clicked on this post, you probably have a good idea of what ray tracing is. In the interest of completeness, however, I will provide a basic description here. Ray tracing is a form of 3D rendering that achieves realistic graphics by simulating the path of light as it interacts with objects in a virtual scene. Unlike traditional rasterization, which focuses on projecting the scene geometry to pixels directly, ray tracing traces the path of light rays from the viewer's perspective, emulating the behavior of light in the real world. By simulating the interactions of light with various objects and surfaces, ray tracing produces highly accurate and visually impressive results with accurate reflections, shadows, and other elements that are difficult and expensive to achieve accurately with traditional rasterization. However, it is far slower than the extremely fast rasterization rendering technique (the dominant technique in realtime graphics). Recently, modern hardware has made it possible to perform ray tracing in real time. Animated movies have been using ray tracing for a while, and Pixar’s 2013 movie, Monsters University, was the first animated movie to use ray tracing technology for all lighting and shading.
 {{< line_break >}}
@@ -36,11 +40,7 @@ Here is a diagram that demonstrates ray tracing:
 And here is the Cornell Box, a popular scene that showcases what ray tracing can do by implementing light sources, shadows, global illumination, reflections, ect:
 {{< line_break >}}
 {{< line_break >}}
-Of course, this is only a surface level explanation covering the basics. Ray tracing can also be extended with more advanced techniques like global illumination and path tracing. For a more complete description, I recommend checking out the book *The Ray Tracing in One Weekend* by Peter Shirley  (which I'm currently using to build a more advanced path tracer in C++).
-{{< line_break >}}
-{{< line_break >}}
-{{< title >}} Showcase & Code Link {{< /title >}}
-The code was linked in the first paragraph, but can also be accessed {{< link href="https://github.com/rachitkakkar/resurgence_renderer/tree/main/Version1" >}}here.{{< /link >}}
+Of course, this is only a surface level explanation covering the basics. Ray tracing can also be extended with more advanced techniques like global illumination and path tracing. For a more complete description, I recommend checking out the book *Ray Tracing in One Weekend* by Peter Shirley  (which I'm currently using to build a more advanced path tracer in C++).
 {{< line_break >}}
 {{< line_break >}}
 Some picture results of the python ray tracer we will create (in addition to the picture in the thumbnail) can be seen here:

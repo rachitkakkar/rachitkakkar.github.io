@@ -4,21 +4,21 @@ hljs.highlightAll(); // Syntax Highlighting
 var darkMode;
 
 if (localStorage.theme === "dark" || !("theme" in localStorage)) {
-    document.getElementById("moon").classList.add("hidden");
-    document.getElementById("sun").classList.remove("hidden");
+  document.getElementById("moon").classList.add("hidden");
+  document.getElementById("sun").classList.remove("hidden");
 
-    document.getElementById("light-theme").setAttribute("disabled", "disabled");
+  document.getElementById("light-theme").setAttribute("disabled", "disabled");
 
-    document.documentElement.classList.add('dark');
-    darkMode = true;
-  } else {
-    document.getElementById("moon").classList.remove("hidden");
-    document.getElementById("sun").classList.add("hidden");
+  document.documentElement.classList.add('dark');
+  darkMode = true;
+} else {
+  document.getElementById("moon").classList.remove("hidden");
+  document.getElementById("sun").classList.add("hidden");
 
-    document.getElementById("dark-theme").setAttribute("disabled", "disabled");
-    
-    document.documentElement.classList.remove('dark');
-    darkMode = false;
+  document.getElementById("dark-theme").setAttribute("disabled", "disabled");
+  
+  document.documentElement.classList.remove('dark');
+  darkMode = false;
 };
 
 function toggleDarkMode() {
