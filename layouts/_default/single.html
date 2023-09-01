@@ -1,6 +1,7 @@
 {{ define "main" }}
 <div class="bg-white dark:bg-zinc-800 mx-3 sm:mx-[5%] md:mx-[10%] lg:mx-[15%] my-9">
     <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-6xl">{{ .Title }}</h1>
+    <img width="100%" src="{{ .Params.thumbnail_image }}" class="pt-5"></img>
     <div class="mt-6 text-lg leading-8 text-gray-500 dark:text-gray-300">{{ .Content }}</div>
 </div>
 {{ end }}
