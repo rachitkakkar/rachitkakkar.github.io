@@ -1,63 +1,63 @@
 ---
 title: "Building A Basic Python Ray Tracer With Pygame"
-date: 2023-06-18T17:01:58-05:00
+date: 2024-06-18T17:00:00-00:00
 summary: "In this blog post, I will be detailing the process of creating a simple ray tracing library using pygame. I first undertook the project in my middle school advanced coding class due to an interest in 3D rendering that emerged during quarantine."
 thumbnail_image: thumbnail.png
-draft: false
+draft: true
 ---
-{{< title >}} Introduction {{< /title >}}
+## Introduction
 In this blog post, I will be detailing the process of creating a simple ray tracing library using pygame. I first undertook the project in my middle school advanced coding class due to an interest in 3D rendering that emerged during quarantine. The project served as an easy project to improve my python skills that could still generate beautiful images. Despite its simplicity, the project still took me a long time to research and understand the ray tracing technique before everything finally "clicked".
-{{< line_break >}}
-{{< line_break >}}
+<!-- {{< line_break >}}
+{{< line_break >}} -->
 
-{{< title >}} Showcase & Code Link {{< /title >}}
+## Showcase & Code Link
 The code can be accessed {{< link href="https://github.com/rachitkakkar/resurgence_renderer/tree/main/Version1" >}}here.{{< /link >}}
-{{< line_break >}}
-{{< line_break >}}
+<!-- {{< line_break >}}
+{{< line_break >}} -->
 
-{{< title >}} Background {{< /title >}}
+## Background
 If you clicked on this post, you probably have a good idea of what ray tracing is. In the interest of completeness, however, I will provide a basic description here. Ray tracing is a form of 3D rendering that achieves realistic graphics by simulating the path of light as it interacts with objects in a virtual scene. Unlike traditional rasterization, which focuses on projecting the scene geometry to pixels directly, ray tracing traces the path of light rays from the viewer's perspective, emulating the behavior of light in the real world. By simulating the interactions of light with various objects and surfaces, ray tracing produces highly accurate and visually impressive results with accurate reflections, shadows, and other elements that are difficult and expensive to achieve accurately with traditional rasterization. However, it is far slower than the extremely fast rasterization rendering technique (the dominant technique in realtime graphics). Recently, modern hardware has made it possible to perform ray tracing in real time. Animated movies have been using ray tracing for a while, and Pixar’s 2013 movie, Monsters University, was the first animated movie to use ray tracing technology for all lighting and shading.
-{{< line_break >}}
-{{< line_break >}}
+<!-- {{< line_break >}}
+{{< line_break >}} -->
 
 The basic principles:
-{{< line_break >}}
+<!-- {{< line_break >}} -->
 
 Ray Generation: The process begins by generating rays from the viewer's eye through each pixel on the screen. These rays act as virtual camera rays and serve as the starting point for the ray tracing algorithm.
-{{< line_break >}}
-{{< line_break >}}
+<!-- {{< line_break >}}
+{{< line_break >}} -->
 
 Ray Intersection: Once the rays are generated, they are traced through the virtual scene. As the rays propagate, they intersect with objects within the scene, such as geometry or surfaces. These intersections are computed by solving mathematical equations or algorithms, determining the point at which the ray interacts with an object.
-{{< line_break >}}
-{{< line_break >}}
+<!-- {{< line_break >}}
+{{< line_break >}} -->
 
 Reflection and Refraction: When a ray intersects with a surface, it can either bounce off (reflection) or pass through (refraction) the object, based on the material properties defined for the surface. This behavior allows for the simulation of realistic effects like shiny reflections or transparent objects.
-{{< line_break >}}
-{{< line_break >}}
+<!-- {{< line_break >}}
+{{< line_break >}} -->
 
 Lighting: As rays bounce or pass through objects, they interact with light sources and other objects in the scene. This interaction determines the intensity and color of the rays, taking into account factors such as the material's properties, the angle of incidence, and the presence of shadows.
-{{< line_break >}}
-{{< line_break >}}
+<!-- {{< line_break >}}
+{{< line_break >}} -->
 
 Shadow Calculation: Shadows are an essential aspect of rendering realistic scenes. Ray tracing calculates shadows by determining if a ray from a surface point to a light source is blocked by any other object in the scene. If an obstruction is detected, the point is in shadow and receives less light.
-{{< line_break >}}
-{{< line_break >}}
+<!-- {{< line_break >}}
+{{< line_break >}} -->
 
 Here is a diagram that demonstrates ray tracing:
-{{< line_break >}}
-{{< line_break >}}
+<!-- {{< line_break >}}
+{{< line_break >}} -->
 
 And here is the Cornell Box, a popular scene that showcases what ray tracing can do by implementing light sources, shadows, global illumination, reflections, ect:
 
-{{<image>}}cbox_pathtracing.jpg{{< /image >}}
+![Cornell Box](cbox_pathtracing.jpg)
 
 Of course, this is only a surface level explanation covering the basics. Ray tracing can also be extended with more advanced techniques like global illumination and path tracing. For a more complete description, I recommend checking out the book *Ray Tracing in One Weekend* by Peter Shirley  (which I'm currently using to build a more advanced path tracer in C++).
-{{< line_break >}}
-{{< line_break >}}
+<!-- {{< line_break >}}
+{{< line_break >}} -->
 Some picture results of the python ray tracer we will create (in addition to the picture in the thumbnail) can be seen here:
-{{< line_break >}}
-{{< line_break >}}
-{{< title >}} Vector Class {{< /title >}}
+<!-- {{< line_break >}}
+{{< line_break >}} -->
+## Vector Class
 The code of the vector class is as follows:
 {{< code_highlight >}}
 from math import sqrt

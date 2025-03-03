@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+p {
+  @apply mb-5;
+}
+
+h2 {
+  @apply text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-2xl pt-3 pb-2;
+}
+
+.content img {
+  @apply w-full;
+}
+
+pre {
+  @apply text-sm mt-[-1rem] pb-2;
+}
+
+blockquote {
+  @apply p-4 mb-4 border-s-4 text-sm md:text-lg italic font-medium leading-relaxed text-gray-500 dark:text-gray-400 border-gray-300 bg-gray-50 dark:border-gray-500 dark:bg-zinc-700;
+}
+
+blockquote p {
+  @apply m-0;
+}
+
+.content a {
+  @apply text-rose-500 dark:text-rose-300 underline;
+}
+
+.content .footnotes ol {
+  @apply list-decimal;
+}
+
+.content .footnote-ref {
+  @apply no-underline;
+}
+
+.content .footnote-backref {
+  @apply no-underline;
+}

@@ -9,7 +9,7 @@ if (localStorage.theme === "dark" || !("theme" in localStorage)) {
 
   document.getElementById("light-theme").setAttribute("disabled", "disabled");
 
-  document.documentElement.classList.add('dark');
+  document.documentElement.classList.add("dark");
   darkMode = true;
 } else {
   document.getElementById("moon").classList.remove("hidden");
@@ -17,7 +17,7 @@ if (localStorage.theme === "dark" || !("theme" in localStorage)) {
 
   document.getElementById("dark-theme").setAttribute("disabled", "disabled");
   
-  document.documentElement.classList.remove('dark');
+  document.documentElement.classList.remove("dark");
   darkMode = false;
 };
 
