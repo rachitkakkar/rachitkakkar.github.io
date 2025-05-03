@@ -1,40 +1,40 @@
 {{ define "main" }}
 <div class="bg-white dark:bg-zinc-800 mx-3 sm:mx-[5%] md:mx-[10%] lg:mx-[15%] my-9">
-    <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-6xl">{{ .Title }}</h1>
-    <div class="mt-6 text-sm leading-8 text-gray-500 dark:text-gray-300">{{ .Content }}</div>
+  <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-6xl">{{ .Title }}</h1>
+  <div class="mt-6 text-sm leading-8 text-gray-500 dark:text-gray-300">{{ .Content }}</div>
 
-    {{ range .Pages }}
-        <div class="max-w-full sm:flex rounded overflow-hidden shadow-xl mt-6">
-            <div class="h-48 sm:h-auto sm:w-48 flex-none bg-cover rounded-t sm:rounded-t-none sm:rounded-l text-center overflow-hidden" style="background-image: url('{{ .RelPermalink }}/{{ .Params.thumbnail_image }}')">
-            </div>
-            <div class="bg-white dark:bg-zinc-800 rounded-b sm:rounded-b-none sm:rounded-r p-4 flex flex-col justify-between leading-normal">
-              <div class="mb-8">
-                <p class="text-md text-gray-500 dark:text-gray-300 flex items-center">
-                  {{ .Date.Format "January 2, 2006" }}
-                </p>
-                <div class="text-gray-800 dark:text-gray-200 font-bold text-2xl mb-2">{{ .Title }}</div>
-                <p class="text-gray-500 dark:text-gray-300 text-lg">{{ .Summary }}</p>
-              </div>
-              <div class="flex items-center">
-                <div class="text-sm pb-2">
-                  <a href="{{ .RelPermalink }}" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">
-                    Read More
-                  </a>
-                </div>
-              </div>
-              <!-- Tags (future)? 
-              <div class="pt-5">
-                <span class="inline-block bg-gray-200 dark:bg-gray-400 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2">projects</span>
-                <span class="inline-block bg-gray-200 dark:bg-gray-400 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2">web</span>
-              </div> 
-              -->
-            </div>
+  {{ range .Pages }}
+    <div class="max-w-full sm:flex rounded overflow-hidden shadow-xl mt-6">
+      <div class="h-48 sm:h-auto sm:w-48 flex-none bg-cover rounded-t sm:rounded-t-none sm:rounded-l text-center overflow-hidden" style="background-image: url('{{ .RelPermalink }}/{{ .Params.thumbnail_image }}')">
+      </div>
+      <div class="bg-white dark:bg-zinc-800 rounded-b sm:rounded-b-none sm:rounded-r p-4 flex flex-col justify-between leading-normal">
+        <div class="mb-8">
+          <p class="text-md text-gray-500 dark:text-gray-300 flex items-center">
+            {{ .Date.Format "January 2, 2006" }}
+          </p>
+          <div class="text-gray-800 dark:text-gray-200 font-bold text-2xl mb-2">{{ .Title }}</div>
+          <p class="text-gray-500 dark:text-gray-300 text-lg">{{ .Summary }}</p>
         </div>
-    {{ end }}
+        <div class="flex items-center">
+          <div class="text-sm pb-2">
+            <a href="{{ .RelPermalink }}" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full">
+              Read More
+            </a>
+          </div>
+        </div>
+        <!-- Tags (future)? 
+        <div class="pt-5">
+          <span class="inline-block bg-gray-200 dark:bg-gray-400 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2">projects</span>
+          <span class="inline-block bg-gray-200 dark:bg-gray-400 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 dark:text-gray-300 mr-2 mb-2">web</span>
+        </div> 
+        -->
+        </div>
+    </div>
+  {{ end }}
 
-    <a href="/posts/index.xml" class="mt-4 flex items-center justify-center gap-x-2 hover:underline text-gray-600 dark:text-gray-300">
-      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path fill="currentColor" d="M0 64C0 46.3 14.3 32 32 32c229.8 0 416 186.2 416 416c0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96C14.3 96 0 81.7 0 64zM0 416a64 64 0 1 1 128 0A64 64 0 1 1 0 416zM32 160c159.1 0 288 128.9 288 288c0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>
-      RSS Feed
-    </a>
+  <a href="/posts/index.xml" class="mt-4 flex items-center justify-center gap-x-2 hover:underline text-gray-600 dark:text-gray-300">
+    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path fill="currentColor" d="M0 64C0 46.3 14.3 32 32 32c229.8 0 416 186.2 416 416c0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96C14.3 96 0 81.7 0 64zM0 416a64 64 0 1 1 128 0A64 64 0 1 1 0 416zM32 160c159.1 0 288 128.9 288 288c0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>
+    RSS Feed
+  </a>
 </div>
 {{ end }}

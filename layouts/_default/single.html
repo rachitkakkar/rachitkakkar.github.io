@@ -1,8 +1,9 @@
 {{ define "main" }}
 <div class="bg-white dark:bg-zinc-800 mx-3 sm:mx-[5%] md:mx-[10%] lg:mx-[15%] my-9">
-    <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-6xl">{{ .Title }}</h1>
-    <p class="text-md tracking-tight text-gray-600 dark:text-gray-300 sm:text-2xl py-3">{{ .Params.summary }}</h2>
-    <img width="100%" src="{{ .Params.thumbnail_image }}" class="py-3"></img>
-    <div class="text-lg text-justify leading-8 text-gray-600 dark:text-gray-300 content">{{ .Content }}</div>
+  <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-6xl mb-3">{{ .Title }}</h1>
+  <p class="text-base tracking-tight text-gray-600 dark:text-gray-300 sm:text-2xl mb-3">{{ .Params.summary }}</p>
+  <img width="100%" src="{{ .Params.thumbnail_image }}"></img>
+  <p class="text-sm font-serif text-gray-600 dark:text-gray-300 sm:text-base mt-3 mb-5">{{ .Params.thumbnail_caption }}</p>
+  <div class="text-lg text-justify leading-8 text-gray-600 dark:text-gray-300 content">{{ .Content }}</div>
 </div>
 {{ end }}
